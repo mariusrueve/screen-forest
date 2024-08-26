@@ -1,0 +1,13 @@
+CC(Nc1nc(n2c(C)cc(C)n2)nc(NC(C)C)n1)C 852502
+CC[C@H]([C@H](c1c(c2c(O)cc1)ccc(O)n2)O)[NH2+]C(C)C 855847
+CCNc1nc(n2c(C)cc(C)n2)nc(NCC)n1 7976579
+CCC[NH2+][C@@H](C(Nc1c(C)cccc1)=O)C 11532855
+COc1ccc([C@@H]([NH2+]C[C@@H](c2cc(NC=O)c(O)cc2)O)C)cc1 11532990
+CCOc1c(OS(c2c([N+]([O-])=O)cccc2)(=O)=O)ccc(C(N3CCOCC3)=S)c1 17504821
+COc1ccc(N([C@@](c2ncccc2)(C(Nc3c(C)cccc3C)=O)C)C(CCl)=O)cc1 17509418
+Cc1c(C)cc(NC(c2cc(c3cc2)C(=O)N(C[C@@H]4OCCC4)C3=O)=O)cc1 24801332
+CC(C1)=C\C(\C1)=N/NC(NCc2ccccc2)=S 24827328
+CN(C(S1)=N\C(\S1)=N\Cc2ccco2)C 26665014
+S=C([C@H](c1[nH]c(c2n1)cccc2)C#N)Nc3ccccc3 26731605
+CC([NH2+]C[C@H](c1cc(O)c(O)cc1)O)C 50085961
+CC(c1cc(C(NC(N[C@@H](c2ccccc2)CO)=O)(C)C)ccc1)(NC(N[C@@H](c3ccccc3)CO)=O)C 51089748
