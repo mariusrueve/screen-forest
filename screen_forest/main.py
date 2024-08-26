@@ -23,9 +23,9 @@ random.seed(42)
 targets = random.sample(targets, 3)
 
 # for each target train a model and predict the validation data
-for lea in targets:
-    print(f"Target: {lea}")
-    data = get_litpcba(path_to_litpcba, lea)
+for target in targets:
+    print(f"Target: {target}")
+    data = get_litpcba(path_to_litpcba, target)
     active_molecules = data["T"]["active"]
     inactive_molecules = data["T"]["inactive"]
     model = LigandScreeningTool(active_molecules, inactive_molecules)
