@@ -1,6 +1,9 @@
 import os
+import random
 
 from rdkit import Chem
+
+random.seed(42)
 
 
 def get_litpcba(path_to_litpcba, folder_name) -> dict:
@@ -31,4 +34,11 @@ def get_litpcba(path_to_litpcba, folder_name) -> dict:
             "active": active_molecules,
             "inactive": inactive_molecules,
         }
+    # if a set is over 50 molecules, take a random sample of 50
+    for data_type in ["T", "V"]:
+        for label in ["active", "inactive"]:
+            if len(data[data_type][label]) > 50:
+                data[data_type][label] = random.sample(
+                    data[data_type][label], 50
+                )
     return data
