@@ -1,5 +1,4 @@
 import pathlib
-import random
 
 from ligand_screening_tool import LigandScreeningTool
 
@@ -14,13 +13,7 @@ RDLogger.DisableLog("rdApp.*")
 path_to_litpcba = pathlib.Path("lit-pcba")
 
 # get all targets from the lit-pcba dataset ie the folder names
-targets = [
-    folder.name for folder in path_to_litpcba.iterdir() if folder.is_dir()
-]
-
-# pick 3 random targets
-random.seed(42)
-targets = random.sample(targets, 3)
+targets = ["KAT2A"]
 
 # for each target train a model and predict the validation data
 for target in targets:
@@ -29,7 +22,8 @@ for target in targets:
     active_molecules = data["T"]["active"]
     inactive_molecules = data["T"]["inactive"]
     model = LigandScreeningTool(active_molecules, inactive_molecules)
-    model.train()
+    accuracy = model.train()
+    print(f"Accuracy on training data: {accuracy}")
     print("Predictions:")
     validation_active_molecules = data["V"]["active"]
     validation_inactive_molecules = data["V"]["inactive"]
